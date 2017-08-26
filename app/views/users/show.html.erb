@@ -9,16 +9,14 @@
   <strong>Email:</strong>
   <%= @user.email %>
 </p>
-<% if @microposts != nil %>
-  <p> 
-    <strong>Microposts:</strong> 
-    <%= @user.microposts.first.content %>
-  </p>
-<% else %>
-  <p>
-    <strong>Microposts:</strong> no posts yet
-  </p>
+
+<% if @micropost %>
+<p> 
+  <strong>Microposts:</strong> 
+  <%= @micropost.content %>
+</p>
 <% end %>
+
 
 
 <%= link_to 'Edit', edit_user_path(@user) %> |
